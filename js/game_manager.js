@@ -75,14 +75,14 @@ GameManager.prototype.addRandomTile = function () {
   if (this.grid.cellsAvailable() && Math.random() < ((this.grid.availableCells().length+1)/16.0) ) {
     var value = this.tileCounter==0?1:this.tileCounter ;
     var tile = new Tile(this.grid.randomAvailableCell(), value);
-    tileCounter+=1;
+    this.tileCounter+=1;
 
     this.grid.insertTile(tile);
     if(this.grid.availableCells().length > 12){
 
       var value = this.tileCounter==0?1:this.tileCounter ;
       var tile = new Tile(this.grid.randomAvailableCell(), value);
-      tileCounter+=1;
+      this.tileCounter+=1;
   
       this.grid.insertTile(tile);
     }
