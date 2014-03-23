@@ -73,7 +73,7 @@ GameManager.prototype.addStartTiles = function () {
 var tileCounter=0;
 GameManager.prototype.addRandomTile = function () {
   if (this.grid.cellsAvailable() && Math.random() < ((this.grid.availableCells().length+1)/16.0) ) {
-    var value = tileCounter;
+    var value = tileCounter==0?1:tileCounter ;
     var tile = new Tile(this.grid.randomAvailableCell(), value);
     tileCounter+=1;
 
